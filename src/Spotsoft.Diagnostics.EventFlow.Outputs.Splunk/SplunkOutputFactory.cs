@@ -20,8 +20,8 @@ namespace Spotsoft.Diagnostics.EventFlow.Outputs.Splunk
             Requires.NotNull(configuration, nameof(configuration));
             Requires.NotNull(healthReporter, nameof(healthReporter));
 
+            //// TODO also target .NET Core 2.1 and use IHttpClientFactory and Polly for exponential backoff etc.
             var services = new ServiceCollection();
-            services.AddSingleton(healthReporter);
             services.AddSingleton<SplunkOutputConfiguration>(s =>
             {
                 var configFactory = new SplunkOutputConfigurationFactory();

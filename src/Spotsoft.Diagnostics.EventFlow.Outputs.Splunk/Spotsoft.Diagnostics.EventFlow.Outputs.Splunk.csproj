@@ -7,7 +7,7 @@
     <Company>Spotsoft</Company>
     <TargetFrameworks>netstandard1.6;net451;netstandard2.0</TargetFrameworks>
     <AssemblyName>Spotsoft.Diagnostics.EventFlow.Outputs.Splunk</AssemblyName>
-    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionPrefix>1.0.0-beta1</VersionPrefix>
     <PackageId>Spotsoft.Diagnostics.EventFlow.Outputs.Splunk</PackageId>
     <PackageTags>Spotsoft;Microsoft;Diagnostics;EventFlow;Outputs;Splunk</PackageTags>
     <PackageProjectUrl>https://github.com/hortha/diagnostics-eventflow-splunk</PackageProjectUrl>

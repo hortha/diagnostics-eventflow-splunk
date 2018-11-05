@@ -1,0 +1,37 @@
+﻿{
+  "inputs": [
+    {
+      "type": "Microsoft.Extensions.Logging"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "StdOutput"
+    },
+    {
+      "type": "SplunkOutput",
+      "serviceBaseAddress": "https://hec.mysplunkserver.com:8088", // TODO replace with valid URL
+      "authenticationToken": "B5A79AAD-D822-46CC-80D1-819F80D7BFB0", // TODO replace with valid authentication token
+      "ignoreSslCertificateErrors": "true",
+      "maxRetryAttempts": "5"
+    }
+  ],
+  "healthReporter": {
+    "type": "CsvHealthReporter",
+    "logFilePrefix": "HealthReport",
+    "minReportLevel": "Message",
+    "throttlingPeriodMsec": "1000",
+    "singleLogFileMaximumSizeInMBytes": 1,
+    "logRetentionInDays": 1,
+    "ensureOutputCanBeSaved": false
+  },
+  "schema-version": "2016-08-11",
+
+  "extensions": [
+    {
+      "category": "outputFactory",
+      "type": "SplunkOutput",
+      "qualifiedTypeName": "Spotsoft.Diagnostics.EventFlow.Outputs.Splunk.SplunkOutputFactory, Spotsoft.Diagnostics.EventFlow.Outputs.Splunk"
+    }
+  ]
+}

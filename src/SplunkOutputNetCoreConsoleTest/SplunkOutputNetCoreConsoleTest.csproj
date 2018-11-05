@@ -10,4 +10,14 @@
     <PackageReference Include="Microsoft.Diagnostics.EventFlow.Outputs.StdOutput" Version="1.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Spotsoft.Diagnostics.EventFlow.Outputs.Splunk\Spotsoft.Diagnostics.EventFlow.Outputs.Splunk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="eventFlowConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
