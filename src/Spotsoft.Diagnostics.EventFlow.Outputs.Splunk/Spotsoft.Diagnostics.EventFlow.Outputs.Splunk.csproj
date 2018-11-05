@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Provides an output implementation that sends diagnostics data to a Splunk HTTP Event Collector.</Description>
+    <Copyright>Copyright 2018 © Andrew Horth. All rights reserved.</Copyright>
+    <Authors>Andrew Horth</Authors>
+    <Company>Spotsoft</Company>
+    <TargetFrameworks>netstandard1.6;net451;netstandard2.0</TargetFrameworks>
+    <AssemblyName>Spotsoft.Diagnostics.EventFlow.Outputs.Splunk</AssemblyName>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <PackageId>Spotsoft.Diagnostics.EventFlow.Outputs.Splunk</PackageId>
+    <PackageTags>Spotsoft;Microsoft;Diagnostics;EventFlow;Outputs;Splunk</PackageTags>
+    <PackageProjectUrl>https://github.com/hortha/diagnostics-eventflow-splunk</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/hortha/diagnostics-eventflow-splunk/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.6' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.6' ">1.6.1</NetStandardImplicitPackageVersion>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard2.0' ">2.0.0</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Diagnostics.EventFlow.Core" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
