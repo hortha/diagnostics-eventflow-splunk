@@ -56,3 +56,9 @@ This output writes data to a [Splunk HTTP Event Collector (HEC)](http://docs.spl
 | `sourcetype` | string | No | The Splunk [source type](https://docs.splunk.com/Splexicon:Sourcetype) associated with the event. Leave blank unless you specifically want to override the default source type associated with the HEC token. |
 | `ignoreSslCertificateErrors` | boolean | No | When set to true can be used against a Splunk HEC with a self-signed SSL certificate (only recommended for testing purposes). |
 | `maxRetryAttempts` | integer | No | Maximum number of attempts to call the Splunk HEC API if it returns a server error HTTP Status Code (i.e. >= 500). This uses an exponential backoff algorithm. |
+
+## Splunk Dashboard
+
+The events might end up looking something like this on the Splunk dashboard:
+
+![Splunk Dashboard Example](https://github.com/hortha/diagnostics-eventflow-splunk/blob/master/src/SplunkOutputNetCoreConsoleTest/SplunkOutputScreenshot.png)
