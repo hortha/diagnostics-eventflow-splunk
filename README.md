@@ -3,6 +3,9 @@
 ## Introduction
 Extensions to Microsoft Diagnostics EventFlow to output to Splunk.
 
+### Build Status
+[![Build Status](https://dev.azure.com/hortha/Public/_apis/build/status/hortha.diagnostics-eventflow-splunk)](https://dev.azure.com/hortha/Public/_build/latest?definitionId=1)
+
 **Outputs**
 - [Splunk (via HTTP Event Collector)](#splunk)
 
